@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    tools:context=".ProductPage">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutproduct"
+        android:layout_width="367dp"
+        android:layout_height="811dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2Product"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoApp_product"
+                android:layout_width="147dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/txt_title_product"
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Producto"
+                android:textColor="@color/title_orange"
+                android:textSize="28sp"
+                android:textStyle="italic|bold" />
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="match_parent"
+            android:layout_height="366dp"
+            android:paddingVertical="20dp"
+            android:src="@drawable/product_image_placeholder" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3Product"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="10sp">
+
+            <TextView
+                android:id="@+id/txt_name_product"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_detail_product"
+                android:layout_width="match_parent"
+                android:layout_height="102dp"
+                android:text="Es una bandeja con material
+piedra artificial"
+                android:textColor="@color/title_orange"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4Product"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+
+            <TextView
+                android:id="@+id/txt_title_price_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Precio :"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_price_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="5 €"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5Product"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+
+            <TextView
+                android:id="@+id/txt_title_size_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Tamaño :"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_size_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="10 * 10 cm"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6Product"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+
+            <TextView
+                android:id="@+id/txt_title_color_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="colores :"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_color_product"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Red/Black"
+                android:textColor="@color/title_orange"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

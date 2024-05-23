@@ -21,11 +21,10 @@ class InformationPage : AppCompatActivity() {
         }
 
         logoAppInformation.setOnClickListener{
-            // Aquí abrimos la actividad ContactPage.kt
+            // Aquí abrimos la actividad HomePage.kt
             val intent4 = Intent(this, HomePage::class.java)
             startActivity(intent4)
         }
 
-        // TODO: add a function for logoapp,for openin Homepage 
     }
 }

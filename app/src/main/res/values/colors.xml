@@ -3,6 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="title_orange">#BD8803</color>
-    <color name="background_gray">#002C2A</color>
-    <color name="button_light_gray">#15605B</color>
+    <color name="background_gray">#F72B2E2E</color>
+    <color name="button_light_gray">#535858</color>
 </resources>
