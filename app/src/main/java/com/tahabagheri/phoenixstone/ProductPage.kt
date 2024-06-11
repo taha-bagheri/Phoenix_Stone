@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import coil.load
 import retrofit2.Callback
 import retrofit2.Call
 import retrofit2.Response
@@ -18,6 +19,7 @@ class ProductPage : AppCompatActivity() {
     private lateinit var txtPriceProduct : TextView
     private lateinit var txtSizeProduct : TextView
     private lateinit var txtColorProduct : TextView
+    private lateinit var imageproduct : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,8 @@ class ProductPage : AppCompatActivity() {
         txtPriceProduct = findViewById(R.id.txt_price_product)
         txtSizeProduct = findViewById(R.id.txt_size_product)
         txtColorProduct = findViewById(R.id.txt_color_product)
+        imageproduct = findViewById(R.id.img_product)
+
 
 
 
@@ -39,6 +43,8 @@ class ProductPage : AppCompatActivity() {
                 txtPriceProduct.text = productGlobal.price
                 txtSizeProduct.text = productGlobal.size
                 txtColorProduct.text = productGlobal.color
+
+        imageproduct.load(productGlobal.imageUrl)
 
         logoAppProduct.setOnClickListener{
             // Aquí abrimos la actividad HomePage.kt

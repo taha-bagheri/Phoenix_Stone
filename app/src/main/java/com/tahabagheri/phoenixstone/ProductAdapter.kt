@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.squareup.picasso.Picasso
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
@@ -48,10 +50,11 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         val products = productList[i]
         viewHolder.itemName.text = products.name
-        viewHolder.itemImage.setImageResource(images[i])
         viewHolder.linearItem.setOnClickListener{
             onProductClick?.productClick(products)
         }
+
+            viewHolder.itemImage.load(products.imageUrl)
 
 
     }
