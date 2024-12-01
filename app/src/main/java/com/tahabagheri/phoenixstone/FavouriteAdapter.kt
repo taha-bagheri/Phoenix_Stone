@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class FavouriteAdapter(private val items: MutableList<Product> = mutableListOf()) : RecyclerView.Adapter<FavouriteAdapter.ViewHolder>() {
 
     private var onProductClick: OnProductClickListener? = null
 
@@ -21,7 +21,6 @@ class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) 
 
     interface OnProductClickListener {
         fun productClick(product: Product)
-        fun onAddFavourite(product: Product)
         fun onRemoveFavourite(product: Product)
     }
 
@@ -55,9 +54,6 @@ class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) 
             if (products.isFavourite) {
                 viewHolder.fav.setImageResource(R.drawable.favourite_disable)
                 onProductClick?.onRemoveFavourite(products)
-            } else {
-                viewHolder.fav.setImageResource(R.drawable.favourite_active)
-                onProductClick?.onAddFavourite(products)
             }
             products.isFavourite = !products.isFavourite
         }

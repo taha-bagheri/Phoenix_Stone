@@ -1,3 +1,7 @@
 package com.tahabagheri.phoenixstone
 
-lateinit var productGlobal: ProductDetail2
+lateinit var productDetail: Product
+
+
+val shopingList = mutableListOf<Product>()
+val favList = mutableListOf<Product>()

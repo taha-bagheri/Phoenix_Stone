@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "575699365088",
+    "project_id": "phoenix-stone-df95b",
+    "storage_bucket": "phoenix-stone-df95b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575699365088:android:1093fc7706028f13073485",
+        "android_client_info": {
+          "package_name": "com.tahabagheri.phoenixstone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmNeP8S-FTfzbRFHLXICNPDJW7SHAwKj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

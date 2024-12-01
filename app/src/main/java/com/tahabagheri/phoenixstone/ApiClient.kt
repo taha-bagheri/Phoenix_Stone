@@ -5,7 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiClient {
 
-    val url : String = "https://myfilminfo.ir/downloads/"
+//    val url : String = "https://myfilminfo.ir/downloads/"
+    val url : String = "https://api.escuelajs.co/api/v1/"
 
     fun getClient() : Retrofit{
 

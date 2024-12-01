@@ -5,6 +5,9 @@ import retrofit2.http.GET
 
 interface ApiInterface {
 
-    @GET("phoenix.json")
-    fun showProduct() : Call<Products>
+//    @GET("phoenix.json")
+//    fun showProduct() : Call<Products>
+
+    @GET("products")
+    fun showProduct(): Call<List<Product>>
 }

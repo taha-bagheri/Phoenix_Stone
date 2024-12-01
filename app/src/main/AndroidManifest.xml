@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".AppClass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,7 +17,22 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".HomePage"
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopingCartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FavouriteActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -25,26 +41,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity
-            android:name=".InformationPage"
+            android:name=".InformationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AboutPage"
+            android:name=".AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ContactPage"
+            android:name=".ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProductsPage"
+            android:name=".ProductsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProductPage"
+            android:name=".ProductDetailActivity"
             android:screenOrientation="portrait" />
-
-
-
     </application>
 
 </manifest>

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray"
-    tools:context=".ProductsActivity">
+    android:background="@color/background_gray">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2About"
@@ -33,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="Products"
+            android:text="Favourits"
             android:textColor="@color/title_orange"
             android:textSize="26sp"
             android:textStyle="italic|bold"
@@ -41,32 +40,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:id="@+id/shopping_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:src="@drawable/shopping_cart" />
-
-            <ImageButton
-                android:id="@+id/profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:src="@drawable/profile" />
-        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

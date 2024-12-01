@@ -3,14 +3,13 @@ package com.tahabagheri.phoenixstone
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ShoppingAdapter(private val items: MutableList<Product> = mutableListOf()) : RecyclerView.Adapter<ShoppingAdapter.ViewHolder>() {
 
     private var onProductClick: OnProductClickListener? = null
 
@@ -21,7 +20,6 @@ class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) 
 
     interface OnProductClickListener {
         fun productClick(product: Product)
-        fun onAddFavourite(product: Product)
         fun onRemoveFavourite(product: Product)
     }
 
@@ -36,31 +34,17 @@ class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) 
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_product, viewGroup, false)
+        val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_shoping, viewGroup, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         val products = items[i]
-        if (products.isFavourite) {
-            viewHolder.fav.setImageResource(R.drawable.favourite_active)
-        } else {
-            viewHolder.fav.setImageResource(R.drawable.favourite_disable)
-        }
         viewHolder.itemName.text = products.title
         viewHolder.linearItem.setOnClickListener {
             onProductClick?.productClick(products)
         }
-        viewHolder.fav.setOnClickListener {
-            if (products.isFavourite) {
-                viewHolder.fav.setImageResource(R.drawable.favourite_disable)
-                onProductClick?.onRemoveFavourite(products)
-            } else {
-                viewHolder.fav.setImageResource(R.drawable.favourite_active)
-                onProductClick?.onAddFavourite(products)
-            }
-            products.isFavourite = !products.isFavourite
-        }
+        viewHolder.price.text = "${products.price.toString()} €"
 
         products.images?.let {
             it.first()?.let {
@@ -81,7 +65,7 @@ class ProductAdapter(private val items: MutableList<Product> = mutableListOf()) 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var itemImage: ImageView = itemView.findViewById(R.id.img_product)
         var itemName: TextView = itemView.findViewById(R.id.txt_product_name_item)
+        var price: TextView = itemView.findViewById(R.id.txt_price)
         var linearItem = itemView.findViewById<ConstraintLayout>(R.id.linearLayoutItemProduct)
-        var fav = itemView.findViewById<ImageButton>(R.id.fav_button)
     }
 }
