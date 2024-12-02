@@ -16,7 +16,7 @@ class ProductDetailActivity : AppCompatActivity() {
     private lateinit var txtNameProduct: TextView
     private lateinit var txtDetailProduct: TextView
 
-    //    private lateinit var txtPriceProduct: TextView
+        private lateinit var txtPriceProduct: TextView
 //    private lateinit var txtSizeProduct: TextView
 //    private lateinit var txtColorProduct: TextView
     private lateinit var imageproduct: ImageView
@@ -39,7 +39,7 @@ class ProductDetailActivity : AppCompatActivity() {
 
         txtNameProduct = findViewById(R.id.txt_name_product)
         txtDetailProduct = findViewById(R.id.txt_detail_product)
-//        txtPriceProduct = findViewById(R.id.txt_price_product)
+        txtPriceProduct = findViewById(R.id.txt_price_product)
 //        txtSizeProduct = findViewById(R.id.txt_size_product)
 //        txtColorProduct = findViewById(R.id.txt_color_product)
         imageproduct = findViewById(R.id.img_product)
@@ -49,7 +49,7 @@ class ProductDetailActivity : AppCompatActivity() {
 
         txtNameProduct.text = productDetail.title
         txtDetailProduct.text = productDetail.description
-//        txtPriceProduct.text = productDetail.price.toString()
+        txtPriceProduct.text = "${productDetail.price} €"
 //                txtSizeProduct.text = productDetail.
 //                txtColorProduct.text = productGlobal.color
 
