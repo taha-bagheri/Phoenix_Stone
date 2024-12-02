@@ -16,13 +16,13 @@ class ContactActivity : AppCompatActivity() {
         val logoAppContact = findViewById<ImageView>(R.id.logoApp_contact)
 
         findViewById<ImageView>(R.id.img_telegram).setOnClickListener {
-            val telegram =  Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/taha_rb"))
-          //  telegram.setPackage("org.telegram.messenger")
+            val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/taha_rb"))
+            //  telegram.setPackage("org.telegram.messenger")
             this.startActivity(Intent.createChooser(telegram, "Share with"))
         }
 
         findViewById<ImageView>(R.id.img_instagram).setOnClickListener {
-         openInstagramPage(this,"Taha__rb")
+            openInstagramPage(this, "Taha__rb")
         }
         findViewById<ImageView>(R.id.img_whatsapp).setOnClickListener {
             val url = "https://api.whatsapp.com/send?phone=" + "+34655215657"
@@ -35,12 +35,18 @@ class ContactActivity : AppCompatActivity() {
             intent.setData(Uri.parse("tel:+34655215657"))
             this.startActivity(Intent.createChooser(intent, "Share with"))
         }
+        findViewById<ImageView>(R.id.img_map).setOnClickListener {
+            val url = "https://www.google.com/maps/search/?api=1&query=" + "Parque de El Retiro, Retiro, 28009 Madrid"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
         logoAppContact.setOnClickListener {
             // Aquí abrimos la actividad ContactPage.kt
             val intent4 = Intent(this, HomeActivity::class.java)
             startActivity(intent4)
         }
     }
+
     fun openInstagramPage(context: Context, username: String) {
         val uri = Uri.parse("http://instagram.com/_u/$username")
         val instagramIntent = Intent(Intent.ACTION_VIEW, uri)
